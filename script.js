@@ -3,7 +3,7 @@ const addPost = document.querySelector('.add-post-form')
 const titleValue = document.getElementById('title-value')
 const contentValue = document.getElementById('textarea')
 const btnClick = document.querySelector('.btn')
-const url = 'https://65098c5df6553137159ba347.mockapi.io/'
+const url = 'https://65098c5df6553137159ba347.mockapi.io/todos'
 let output = '';
 
 const renderPosts = (posts) => {
@@ -107,4 +107,22 @@ postslist.addEventListener('click', (e) => {
 })
 
 
+var myHeaders = new Headers();
+myHeaders.append("Content-Type", "application/json");
 
+var raw = JSON.stringify({
+    "title": "Priyanka",
+    "content": "This uis a content area"
+});
+
+var requestOptions = {
+    method: 'PATCH',
+    headers: myHeaders,
+    body: raw,
+    redirect: 'follow'
+};
+
+fetch("https://65098c5df6553137159ba347.mockapi.io/todos/2", requestOptions)
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error));
