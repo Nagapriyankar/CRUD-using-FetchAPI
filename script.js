@@ -90,7 +90,7 @@ postslist.addEventListener('click', (e) => {
     btnClick.addEventListener('click', (e) => {
         e.preventDefault()
         fetch(`${url}/${id}`, {
-            method: 'PATCH',
+            method: 'PUT',
             header: {
                 'content-type': 'application/json'
             },
