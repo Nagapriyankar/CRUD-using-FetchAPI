@@ -3,7 +3,7 @@ const addPost = document.querySelector('.add-post-form')
 const titleValue = document.getElementById('title-value')
 const contentValue = document.getElementById('textarea')
 const btnClick = document.querySelector('.btn')
-const url = 'https://65069e523a38daf4803e871d.mockapi.io/todo'
+const url = 'https://65098c5df6553137159ba347.mockapi.io/'
 let output = '';
 
 const renderPosts = (posts) => {
