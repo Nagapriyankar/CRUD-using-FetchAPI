@@ -1,0 +1,3 @@
+https://mockapi.io/
+
+https://openweathermap.org/history-bulk
